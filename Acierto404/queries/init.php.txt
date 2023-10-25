@@ -1,0 +1,64 @@
+<?php
+// Conexión a la base de datos (reemplaza con tus propios valores)
+$servername = "tu_servidor";
+$username = "tu_usuario";
+$password = "tu_contraseña";
+$dbname = "tu_base_de_datos";
+
+// Crear la conexión
+$conn = new mysqli($servername, $username, $password);
+
+// Verificar la conexión
+if ($conn->connect_error) {
+    die("Error de conexión a la base de datos: " . $conn->connect_error);
+}
+
+// Crear la base de datos si no existe
+$sql = "CREATE DATABASE IF NOT EXISTS $dbname";
+if ($conn->query($sql) === TRUE) {
+    echo "Base de datos creada con éxito.";
+} else {
+    echo "Error al crear la base de datos: " . $conn->error;
+}
+
+// Seleccionar la base de datos
+$conn->select_db($dbname);
+
+// Ejecutar las sentencias SQL para crear las tablas
+$sql = "
+CREATE TABLE Usuario (
+  idUser INT PRIMARY KEY,
+  email VARCHAR(50) UNIQUE NOT NULL,
+  username VARCHAR(20) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  numCompras INT DEFAULT 0,
+  saldo INT DEFAULT 0
+);
+
+CREATE TABLE Compra (
+  idCompra INT PRIMARY KEY,
+  idUser INT,
+  idProd INT,
+  FOREIGN KEY (idUser) REFERENCES Usuario(idUser),
+  FOREIGN KEY (idProd) REFERENCES Producto(idProd)
+);
+
+CREATE TABLE Producto (
+  idProd INT PRIMARY KEY,
+  nombreProd VARCHAR(50) NOT NULL,
+  marca VARCHAR(20) NOT NULL,
+  precioProd INT NOT NULL,
+  unidProd INT NOT NULL,
+  talla VARCHAR(5)
+);
+";
+
+if ($conn->multi_query($sql) === TRUE) {
+    echo "Tablas creadas con éxito.";
+} else {
+    echo "Error al crear las tablas: " . $conn->error;
+}
+
+// Cerrar la conexión a la base de datos
+$conn->close();
+?>

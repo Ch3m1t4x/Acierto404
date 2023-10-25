@@ -1,0 +1,51 @@
+<mxfile host="app.diagrams.net" modified="2023-10-25T17:41:46.467Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="qoN0AYZPgAdXlRaPoByv" version="22.0.8" type="google">
+  <diagram name="Página-1" id="Sss6ii3ri9x-UQAIMWkf">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Z09FZSw_BqmwwOTUnhNM-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="bCRwTIopjgsugwhCD2JX-1" target="QXZBffxlvyvga_TPlXs8-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z09FZSw_BqmwwOTUnhNM-39" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" connectable="0" vertex="1" parent="Z09FZSw_BqmwwOTUnhNM-32">
+          <mxGeometry x="-0.7482" y="-1" relative="1" as="geometry">
+            <mxPoint x="-4" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z09FZSw_BqmwwOTUnhNM-40" value="n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" connectable="0" vertex="1" parent="Z09FZSw_BqmwwOTUnhNM-32">
+          <mxGeometry x="0.6998" y="-2" relative="1" as="geometry">
+            <mxPoint y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bCRwTIopjgsugwhCD2JX-1" value="&lt;b&gt;Usuario&lt;br&gt;&lt;/b&gt;&lt;br&gt;-idUser&lt;br&gt;-email&lt;br&gt;-username&lt;br&gt;-password&lt;br&gt;-numCompras*&lt;br&gt;-saldo" style="rounded=0;whiteSpace=wrap;html=1;glass=0;shadow=0;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="120" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="bCRwTIopjgsugwhCD2JX-2" value="&lt;b&gt;Producto&lt;br&gt;&lt;/b&gt;&lt;br&gt;-idProd&lt;br&gt;-nombreProd&lt;br&gt;-marca&lt;br&gt;-foto&lt;br&gt;-precioProd&lt;br&gt;-unidProd&lt;br&gt;-talla" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;glass=0;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="520" y="150" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Z09FZSw_BqmwwOTUnhNM-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QXZBffxlvyvga_TPlXs8-2" target="bCRwTIopjgsugwhCD2JX-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z09FZSw_BqmwwOTUnhNM-37" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" connectable="0" vertex="1" parent="Z09FZSw_BqmwwOTUnhNM-33">
+          <mxGeometry x="-0.7835" y="-2" relative="1" as="geometry">
+            <mxPoint y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z09FZSw_BqmwwOTUnhNM-38" value="n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" connectable="0" vertex="1" parent="Z09FZSw_BqmwwOTUnhNM-33">
+          <mxGeometry x="0.7143" y="1" relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QXZBffxlvyvga_TPlXs8-2" value="&lt;b&gt;Compra&lt;/b&gt;&lt;br&gt;(para listar compras)&lt;br&gt;&lt;br&gt;-idCompra&lt;br&gt;-idUser(FK)&lt;br&gt;idProd(FK)" style="rounded=0;whiteSpace=wrap;html=1;glass=0;shadow=0;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="294" y="290" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Z09FZSw_BqmwwOTUnhNM-34" value="numCompras:&amp;nbsp;&lt;span style=&quot;font-weight: normal;&quot;&gt;SELECT * FROM Producto WHERE idUser=1&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="15" y="560" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z09FZSw_BqmwwOTUnhNM-36" value="Tabla intermedia" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="299" y="240" width="110" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
