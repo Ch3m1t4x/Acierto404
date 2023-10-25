@@ -58,6 +58,7 @@ nav li {
 }
 
 nav a {
+    font-size: 2vw;
     text-decoration: none;
     color: black;
 }
@@ -86,6 +87,7 @@ form button {
 }
 
 .first-impression {
+    font-size: 1vw;
     text-align: center;
     padding: 20px;
 }
@@ -95,6 +97,7 @@ form button {
 }
 
 .gallery_title {
+    font-size: 1vw;
     text-align: center;
 }
 
