@@ -67,24 +67,24 @@ nav a {
     color: rgb(69, 22, 22);
 }
 
-form {
+.form_login {
     display: grid;
     grid-template-columns: 2fr 2fr 1fr;
     grid-row-gap: 5px;
 }
 
-form input {
+.form_login input {
     margin-right: 10px;
     padding: 10px;
     border: 1px solid #ccc;
 }
 
-form button {
+/* .form_login button {
     padding: 10px;
     background-color: #000;
     color: white;
     border: none;
-}
+} */
 
 .first-impression {
     font-size: 1vw;
