@@ -1,0 +1,5 @@
+Estos archivos son para inicializar 
+la base de datos VACÍA. (incluye las tablas y sus respectivos campos)
+ 
+Para cargarla con todos los datos véase la carpeta:
+\DATA\BD Estructurada y Con Datos
