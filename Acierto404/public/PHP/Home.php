@@ -1,3 +1,6 @@
+<?php
+include 'Header.php'
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,42 +16,32 @@
 </head>
 
 <body>
-    <header>
-        <a href="Home.html" id="Logo">
-            <img src="../Imagenes/Logo/Logo.png" alt="Logo" class="logo">
-            <h2>ACIERTO 404</h2>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="Home.html">Inicio</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Fútbol</a></li>
-                <li><a href="#">Baloncesto</a></li>
-            </ul>
-        </nav>
-        <form action="#" class="form_login">
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
-            <button type="submit" class="rounded border border-dark">Log In</button>
-            <br>
-            <a href="Register.html" id="Register">Crear Cuenta</a>
-        </form>
-    </header>
+    <?php
+    $header;
+    ?>
     <main>
         <!-- En la primera impresion debera de haber un banner en vez de ese h1 -->
-        <section class="first-impression rounded-pill my-3 mx-3" style="background-color: #e14b6a;">
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active d-flex justify-content-center">
-                    <img src="../Imagenes/Banners/Banner1.png" class="d-block w-75 rounded-pill" alt="...">
+        <section class="first-impression rounded-pill my-3 mx-3" style="background-color: #e14b6a;">      
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                <div class="carousel-inner rounded-pill banner">
+                  <div class="carousel-item active">
+                    <img src="/Acierto404/public/Imagenes/Banners/Banner3.png" class="d-block w-100" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="../Imagenes/Banners/Banner2.png" class="d-block w-75 rounded-pill" alt="...">
+                    <img src="/Acierto404/public/Imagenes/Banners/Banner2.png" class="d-block w-100" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="../Imagenes/Banners/Banner3.png" class="d-block w-75 rounded-pill" alt="...">
+                    <img src="/Acierto404/public/Imagenes/Banners/Banner1.png" class="d-block w-100" alt="...">
                   </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
         </section>
 
@@ -154,6 +147,9 @@
             </div>
         </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
