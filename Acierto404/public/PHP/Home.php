@@ -1,4 +1,5 @@
 <?php
+    // include("paraIndex.php");
     require ('Header.php');
 ?>
 <!DOCTYPE html>
@@ -40,7 +41,20 @@
                 </button>
               </div>
         </section>
+        <?php
+        include('conexion.php');
 
+        // Obtener los datos de los 3 productos
+        $consultaProductos = "SELECT marca, modelo, precio FROM productos ORDER BY id DESC LIMIT 3";
+
+        try {
+            $stmt = $conn->prepare($consultaProductos);
+            $stmt->execute();
+
+            // Mostrar los productos
+            if ($stmt->rowCount() > 0) {
+                while ($filaProducto = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    ?>
         <section class="gallery_title">
             <h1>Galería de zapatillas más vendidas</h1>
         </section>
@@ -142,6 +156,20 @@
                 </div>
             </div>
         </section>
+
+        <?php
+                }
+            } else {
+                echo "No hay productos disponibles.";
+            }
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+
+        $conn = null; // Cierra la conexión
+    ?>
+
+
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
