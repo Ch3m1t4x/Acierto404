@@ -1,6 +1,6 @@
 <?php
     require ('Header.php');
-    
+    include ('ListarIndex.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -109,37 +109,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
-                        <div class="card">
-                            <div class="d-flex justify-content-between p-3">
-                                <p class="lead mb-0">New Balance</p>
-                            </div>
-                            <a href="Nb_106D.html">
-                                <img src="../Imagenes/Zapas/Nb_1906D.png" class="card-img-top" alt="Nb_1906D" />
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="small"><a href="" class="text-muted">Precio</a></p>
-                                        <p class="small text-danger"><s>190€</s></p>
-                                    </div>
-
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <h5 class="mb-0">New Balance 1906D</h5>
-                                        <h5 class="text-dark mb-0">165€</h5>
-                                    </div>
-                                    <div class="d-flex justify-content-between mb-2">
-                                        <p class="text-muted mb-0">Available: <span class="fw-bold">5</span></p>
-                                        <div class="ms-auto text-warning">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    <?=$cards[0]?>
                 </div>
             </div>
         </section>
