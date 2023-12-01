@@ -80,26 +80,26 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `marca`, `modelo`, `precio`, `foto`, `id_comentario`) VALUES
-(1, 'Adidas', '1234', 426, '', 13),
-(2, 'Adidas', '1234', 121, '', 13),
-(3, 'Adidas', '1234', 213, '', 20),
-(4, 'Adidas', '1234', 299, '', 20),
-(5, 'Adidas', '1234', 270, '', 15),
-(6, 'Adidas', '1234', 12, '', 6),
-(7, 'Adidas', '1234', 433, '', 8),
-(8, 'Adidas', '1234', 311, '', 11),
-(9, 'Adidas', '1234', 482, '', 15),
-(10, 'Nike', '1234', 240, '', 16),
-(11, 'Nike', '1234', 304, '', 12),
-(12, 'Nike', '1234', 49, '', 10),
-(13, 'Nike', '1234', 494, '', 15),
-(14, 'Nike', '1234', 497, '', 4),
-(15, 'Reebok', '1234', 172, '', 14),
-(16, 'Reebok', '1234', 64, '', 18),
-(17, 'Reebok', '1234', 458, '', 12),
-(18, 'Reebok', '1234', 291, '', 19),
-(19, 'Reebok', '1234', 166, '', 14),
-(20, 'Reebok', '1234', 42, '', 19);
+(1, 'Adidas', 'Ultraboost', 426, '../Imagenes/Zapas/adidas_ultraboost.jpg', 13),
+(2, 'Adidas', 'Superstar', 121, '../Imagenes/Zapas/adidas_superstar.jpg', 13),
+(3, 'Adidas', 'NMD', 213, '../Imagenes/Zapas/adidas_nmd.jpg', 20),
+(4, 'Adidas', 'Yeezy', 299, '../Imagenes/Zapas/adidas_yeezy.jpg', 20),
+(5, 'Adidas', 'Stan Smith', 270, '../Imagenes/Zapas/adidas_stan.jpg', 15),
+(6, 'Adidas', 'Adidas Gazelle', 12, '../Imagenes/Zapas/adidas_gazelle.jpg', 6),
+(7, 'Adidas', 'EQT', 433, '../Imagenes/Zapas/adidas_eqt.jpg', 8),
+(8, 'Adidas', 'Falcon', 311, '../Imagenes/Zapas/adidas_falcon.jpg', 11),
+(9, 'Adidas', 'Deerupt', 482, '../Imagenes/Zapas/adidas_deerupt.jpg', 15),
+(10, 'Nike', 'Air Max', 240, '../Imagenes/Zapas/nike_air_max.jpg', 16),
+(11, 'Nike', 'Chunky Dunky', 1400, '../Imagenes/Zapas/nike_chunky.jpg', 12),
+(12, 'Nike', 'React Element', 49, '../Imagenes/Zapas/nike_react.jpg', 10),
+(13, 'Nike', 'Air Pegasus', 494, '../Imagenes/Zapas/nike_air_pegasus.jpg', 15),
+(14, 'Nike', 'Blazer', 497, '../Imagenes/Zapas/nike_blazer.jpg', 4),
+(15, 'New Balance', '550', 172, '../Imagenes/Zapas/nb_550.jpg', 14),
+(16, 'New Balance', '574', 64, '../Imagenes/Zapas/nb_574.jpg', 18),
+(17, 'New Balance', '997', 458, '../Imagenes/Zapas/nb_997.jpg', 12),
+(18, 'New Balance', '996', 291, '../Imagenes/Zapas/nb_996.jpg', 19),
+(19, 'New Balance', 'Fresh Foam Cruz', 166, '../Imagenes/Zapas/nb_fresh.jpg', 14),
+(20, 'New Balance', '1080', 42, '../Imagenes/Zapas/nb_1080.jpg', 19);
 
 -- --------------------------------------------------------
 
