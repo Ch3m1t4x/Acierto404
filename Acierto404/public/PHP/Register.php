@@ -3,7 +3,7 @@ class Register {
     private $usuario;
     private $contraseña;
     private $errores = [];
-    const PATERN = "/^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{7,}$/";
+    private const PATERN = "/^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{7,}$/";
 
     public function __construct($usuario, $contraseña) {
         $this->usuario = $usuario;
@@ -15,7 +15,7 @@ class Register {
             $errores['name'] = 'El nombre no puede estar vacio';
         }if($pass == "") {
             $errores['passVacio'] = 'La contraseña no puede estar vacia ';
-        }if (preg_match($pattern, $password)) {
+        }if (preg_match(PATERN, $this->contraseña)) {
             $errores['passMal'] = 'La contraseña debe tener al menos 7 caracteres un caracter especial y una mayuscula';
         }
     }
