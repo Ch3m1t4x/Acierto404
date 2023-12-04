@@ -3,6 +3,7 @@
 include ('Login.php');
 
 session_start();
+$_SESSION['login'] =false;
 if(isset($_POST['logear'])){
     $login = new Login($_POST['username'], $_POST['pass']);
     if($login->errors()){
